@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarang Theme Selection Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #838383;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.484);
+            width: 400px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Tarang Theme Selection</h2>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            </div>
+            <div class="form-group">
+                <label for="theme">Select a Theme:</label>
+                <select id="theme" name="theme" required>
+                    <option value="">-- Select a Theme --</option>
+                    <option value="wedding_tradition">Wedding Tradition</option>
+                    <option value="folk_art_crafts">Folk Art and Crafts</option>
+                    <option value="cultural_crossroads">Cultural Crossroads</option>
+                    <option value="festivals_fairs">Festivals and Fairs</option>
+                    <option value="freedom_fighters">Era of Freedom Fighters</option>
+                    <option value="tribal_cultures">Tribal Cultures of India</option>
+                    <option value="legends_mythology">Legends and Mythology</option>
+                    <option value="unity_diversity">Unity in Diversity</option>
+                    <option value="traditional_games">Traditional Games and Sports</option>
+                </select>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

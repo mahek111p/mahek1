@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale := 1 ^ prime prime
+
+<title>JavaScript Demonstration</title>
+
+<script>
+
+// Function to display the current date in a text box
+
+function displayDate() {
+
+const date = new Date();
+
+document.getElementById("dateDisplay").value = date.toString();
+
+}
+
+// Function to calculate the factorial of a number
+
+function calculateFactorial() {
+
+let n = prompt("Enter a number to calculate its factorial:");
+
+n = parseInt(n);
+
+if (isNaN(n) || | n < 0 ) {
+
+alert("Please enter a valid non-negative integer.");
+
+return;
+
+}
+
+let factorial = 1 ;
+
+for (let i = 1 i<= n; i++) {
+
+factorial *= i ;
+
+}
+
+alert("The factorial of " + n + " is: " + factorial);
+
+}
+// Function to display the multiplication table of a number
+
+function multiplication Table() {
+
+let n prompt("Enter a number to display its multiplication table:");
+
+n = parseInt(n);
+
+if (isNaN(n)) {
+
+alert("Please enter a valid number.");
+
+return;
+
+let table"";
+
+for (let i=1; i<= 10; i++) {
+
+table += n + "x"+i+"=" + (n*i) + "\n";
+
+alert("Multiplication Table of " + n + ":\n" + table);
+
+// Function to add a number using confirm dialog
+
+function addNumbers() {
+
+let n = prompt("Enter a number:");
+
+n= parseFloat(n);
+
+if (isNaN(n)) {
+
+alert("Please enter a valid number.");
+
+return;
+
+}
+
+let addAnother = confirm("Do you want to add another number?");
+
+if (addAnother) {
+
+let anotherNumber = prompt("Enter another number to add:");
+
+anotherNumber = parseFloat(anotherNumber);
+
+if (isNaN(anotherNumber)) {
+alert("Please enter a valid number.");
+
+return;
+
+let sumn + anotherNumber;
+
+alert("The sum of " + n + " and " + anotherNumber + " is: " + sum);
+
+} else {
+
+alert("You entered: " + n);
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h1>JavaScript using popup boxes </h1>
+
+<h2>1. Display Current Date</h2>
+
+<button onclick="displayDate()">Display Date</button>
+
+<input type="text" id="dateDisplay" readonly>
+
+<h2>2. Calculate Factorial</h2>
+
+<button onclick="calculate Factorial()">Calculate Factorial</button>
+
+<h2>3. Multiplication Table</h2>
+
+<button onclick="multiplicationTable()">Show Multiplication Table</button>
+
+<h2>4. Add Numbers</h2>
+
+<button onclick="addNumbers()">Add Numbers</button>
+
+</body>
+
+</html>

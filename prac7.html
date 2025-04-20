@@ -1,0 +1,67 @@
+document.getElementById('registrationForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Clear previous error messages
+    const errorMessagesDiv = document.getElementById('errorMessages');
+    errorMessagesDiv.innerHTML = '';
+
+    // Get form values
+    const firstName = document.getElementById('firstName').value.trim();
+    const lastName = document.getElementById('lastName').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const mobile = document.getElementById('mobile').value.trim();
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirmPassword').value;
+    const address = document.getElementById('address').value.trim();
+
+    let errors = [];
+
+    if (firstName === '') {
+        errors.push('First Name is required.');
+    }
+
+    if (lastName === '') {
+        errors.push('Last Name is required.');
+    }
+
+    if (email === '') {
+        errors.push('Email ID is required.');
+    } else if (!validateEmail(email)) {
+        errors.push('Invalid email format.');
+    }
+
+    if (mobile === '') {
+        errors.push('Mobile No is required.');
+    } else if (!validateMobile(mobile)) {
+        errors.push('Invalid mobile number format. It should be 10 digits.');
+    }
+
+    if (password === '') {
+        errors.push('Password is required.');
+    } else if (password.length < 6) {
+        errors.push('Password must be at least 6 characters long.');
+    }
+
+    if (confirmPassword === '') {
+        errors.push('Please confirm your password.');
+    } else if (password !== confirmPassword) {
+        errors.push('Passwords do not match.');
+    }
+    if (address === '') {
+        errors.push('Address is required.');
+    }
+
+    if (errors.length > 0) {
+        errorMessagesDiv.innerHTML = errors.join('<br>');
+    } else {
+
+        alert('Registration successful!');
+        // Optionally, you can submit the form using:
+        // this.submit();
+    }
+});
+
+// Function to validate email format
+function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return

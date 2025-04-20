@@ -1,0 +1,26 @@
+CODE:
+
+<?php
+
+function sumOfDigits($num) {
+
+Ssum = 0;
+
+while (Snum > 0) {
+
+Ssum += Snum % 10; // Extract the last digit and add it to sum
+
+Snum (int)(Snum/10); // Remove the last digit
+
+}
+
+return Ssum;
+
+}
+
+// Example usage
+
+Snumber 12345;
+
+echo "Sum of digits of Snumber is: ". sumOfDigits($number);
+?>

@@ -1,0 +1,49 @@
+<IDOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Current Date, Time, and Day</title>
+
+</head>
+
+<body>
+
+<h1>Current Date, Time, and Day</h1>
+
+<p>
+
+<?php
+
+// Set the default timezone (optional)
+
+date_default_timezone_set('America/New_York'); // Change to your timezone
+
+// Get the current date, time, and day
+
+$currentDate = date('Y-m-d'); // Format: YYYY-MM-DD
+
+$currentTime = date('H:i:s'); // Format: HH:MM:SS
+
+$currentDay = date('l'); // Full textual representation of the day
+
+// Display the current date, time, and day
+
+echo "Current Date: ".$currentDate. "<br>";
+
+echo "Current Time: ". $current Time. "<br>";
+
+echo "Current Day: ".$currentDay. "<br>";
+
+?>
+
+</p>
+
+</body>
+
+</html>
